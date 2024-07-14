@@ -2358,7 +2358,7 @@ input, select, textarea {
 					margin-bottom: 1em;
 				}
 
-				.box .image.featured {
+				.box .image.featured .image.solid.featured{
 					position: relative;
 					left: 20px;
 					top: 20px;

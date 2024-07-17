@@ -1620,43 +1620,62 @@ input, select, textarea {
 		margin-bottom: 0;
 	}
 
-/* Image */
+/* General Image Styling */
+.image {
+    display: inline-block;
+    position: relative;
+}
 
-	.image {
-		display: inline-block;
-		position: relative;
-	}
+.image img {
+    display: block;
+}
 
-		.image img {
-			display: block;
-			width: 100%;
-		}
+.image.fit {
+    display: block;
+    width: 100%;
+	overflow: hidden; 
+}
+.image.fit img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover; /* Cover the box without stretching the image */
+		object-position: center; /* Center the image within the box */
 
-		.image.fit {
-			display: block;
-			width: 100%;
-		}
+}
 
-		.image.featured {
-			display: block;
-			width: 100%;
-			margin: 0 0 2em 0;
-		}
+.image.featured {
+    display: block;
+    width: 384px; /* Fixed width */
+    height: 269px; /* Fixed height */
+    margin: 0 0 2em 0;
+    overflow: hidden; 
+    position: relative;
+}
 
-		.image.left {
-			float: left;
-			margin: 0 2em 2em 0;
-		}
+.image.featured img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the box without stretching the image */
+    object-position: center; /* Center the image within the box */
+}
 
-		.image.centered {
-			display: block;
-			margin: 0 0 2em 0;
-		}
+.image.left {
+    float: left;
+    margin: 0 2em 2em 0;
+}
 
-			.image.centered img {
-				margin: 0 auto;
-				width: auto;
-			}
+.image.centered {
+    display: block;
+    margin: 0 0 2em 0;
+}
+
+.image.centered img {
+    margin: 0 auto;
+    width: auto;
+}
+
+
+
 
 /* Button */
 

@@ -31,4 +31,21 @@
 			offset: function() { return $nav.height(); }
 		});
 
+	// EmailJS form submission
+	$('form').on('submit', function(event) {
+		event.preventDefault(); // Prevent the default form submission
+  
+		var formData = $(this).serialize(); // Get the form data
+  
+		emailjs.sendForm('service_8d9n0nk', 'template_fpgbyig', this)
+		   .then(function() {
+			  // Show a success message or perform other actions upon success
+			  $('<span class="success-message">&#10004; Message sent successfully!</span>').insertAfter('form input[type="submit"]');
+		   }, function(error) {
+			  // Handle errors here
+			  console.log('Failed to send email:', error);
+		   });
+	 });
+
 })(jQuery);
+

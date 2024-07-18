@@ -10,6 +10,18 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--Emailjs Script-->
+			<script type="text/javascript"
+				src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+			</script>
+			<script type="text/javascript">
+				(function(){
+					emailjs.init({
+						publicKey: "_RJTPq-VrE4_rZUKT",
+					});
+				})();
+			</script>
+		
 	</head>
 	<body class="is-preload">
 
@@ -149,7 +161,7 @@
 					</header>
 					<div class="row">
 						<div class="col-12">
-							<form method="post" action="#">
+							<form>
 								<div class="row">
 									<div class="col-6 col-12-small">
 										<input type="text" name="name" id="name" placeholder="Name" />
@@ -208,16 +220,7 @@
 			</article>
 
 		<!-- Scripts -->
-			<script type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-			</script>
-			<script type="text/javascript">
-			(function(){
-				emailjs.init({
-					publicKey: "_RJTPq-VrE4_rZUKT",
-				});
-			})();
-			</script>
+			
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>

@@ -165,9 +165,10 @@
 									</div>
 									<div class="col-12">
 										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
+											<li><input type="submit" value="Send Message" onclick="sendmail()"/></li>
 											<li><input type="reset" value="Clear Form" class="alt" /></li>
 										</ul>
+										<span id="status"></span>
 									</div>
 								</div>
 							</form>
@@ -207,6 +208,16 @@
 			</article>
 
 		<!-- Scripts -->
+			<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+			</script>
+			<script type="text/javascript">
+			(function(){
+				emailjs.init({
+					publicKey: "_RJTPq-VrE4_rZUKT",
+				});
+			})();
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
